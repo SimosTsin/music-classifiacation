@@ -25,8 +25,8 @@ plt.figure(figsize=(10,10))
 genres = 'blues classical country disco hiphop jazz metal pop reggae rock'.split()
 for g in genres:
     pathlib.Path(f'img_data/{g}').mkdir(parents=True, exist_ok=True)     
-    for filename in os.listdir(f'C:/Users/Klif/Desktop/IHU/Multimedia Data Analysis/datasets for assignment/gtzan dataset/genres/{g}'):
-        songname = f'C:/Users/Klif/Desktop/IHU/Multimedia Data Analysis/datasets for assignment/gtzan dataset/genres/{g}/{filename}'
+    for filename in os.listdir('path'):
+        songname = 'path'/{filename}'
         y, sr = librosa.load(songname, mono=True, duration=5)
         plt.specgram(y, NFFT=512, Fs=0.5, Fc=0, noverlap=128, cmap=cmap, sides='default', mode='default', scale='dB');
         plt.axis('off');
@@ -55,8 +55,8 @@ with file:
     writer = csv.writer(file)
     writer.writerow(header)
 for g in genres:
-    for filename in os.listdir(f'C:/Users/Klif/Desktop/IHU/Multimedia Data Analysis/datasets for assignment/gtzan dataset/genres/{g}'):
-        songname = f'C:/Users/Klif/Desktop/IHU/Multimedia Data Analysis/datasets for assignment/gtzan dataset/genres/{g}/{filename}'
+    for filename in os.listdir('path'):
+        songname = 'path'/{filename}'
         y, sr = librosa.core.load(songname, mono=True, sr=44100)
         seconds_per_split = 0.5 
         samples_per_split = librosa.core.time_to_samples(seconds_per_split, sr=sr) 
