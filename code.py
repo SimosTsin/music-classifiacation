@@ -2,7 +2,7 @@
 """
 Created on Mon Jun  3 18:02:48 2019
 
-@author: Klif
+@author: Simos
 """
 
 import librosa
